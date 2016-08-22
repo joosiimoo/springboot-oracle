@@ -3,7 +3,7 @@ package com.example.web.model;
 /**
  * Created by Jorge on 8/21/16.
  */
-public class Users {
+public class User {
 
     Long id_user;
     String login;

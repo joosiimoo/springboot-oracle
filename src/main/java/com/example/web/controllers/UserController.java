@@ -1,4 +1,4 @@
-package com.example.web.controller;
+package com.example.web.controllers;
 
 import com.example.web.mappers.UsersMapper;
 import com.example.web.model.Users;
@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
