@@ -1,18 +1,19 @@
-package com.example.web.model;
+package com.example.web.domain;
 
-/**
- * Created by Jorge on 8/21/16.
- */
-public class User {
+import java.io.Serializable;
 
-    Long id_user;
-    String login;
-    String email;
-    String name;
-    String type;
-    String passwd;
-    String passwd_old;
-    String active;
+public class User implements Serializable {
+
+    private static final long serialVersionUID = 1;
+
+    private Long id_user;
+    private String login;
+    private String email;
+    private String name;
+    private String type;
+    private String passwd;
+    private String passwd_old;
+    private String active;
 
     public Long getId_user() {
         return id_user;
@@ -77,4 +78,5 @@ public class User {
     public void setActive(String active) {
         this.active = active;
     }
+
 }

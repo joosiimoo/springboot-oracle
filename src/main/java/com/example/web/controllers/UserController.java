@@ -1,7 +1,7 @@
 package com.example.web.controllers;
 
-import com.example.web.mappers.UsersMapper;
-import com.example.web.model.Users;
+import com.example.web.domain.User;
+import com.example.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,24 +14,24 @@ import java.util.List;
  * Created by Jorge on 8/21/16.
  */
 @Controller
-public class UsersController {
+public class UserController {
 
     @Autowired
-    UsersMapper usersMapper;
+    UserService userService;
 
     @RequestMapping("/users")
     public String users(Model model) {
-        Users users = new Users();
-        users.setId_user(1L);
-        users.setName("Jorge Silva");
+        User user = new User();
+        user.setId_user(1L);
+        user.setName("Jorge Silva");
 
-        model.addAttribute("users", users);
+        model.addAttribute("user", user);
         return "users";
     }
 
     @RequestMapping("/usersall")
     public String usersall(Model model) {
-        List<Users> users = usersMapper.getAllUsers();
+        List<User> users = userService.selectAll();
         model.addAttribute("users", users);
         return "usersall";
     }
