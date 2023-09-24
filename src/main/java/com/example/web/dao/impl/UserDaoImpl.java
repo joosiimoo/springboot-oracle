@@ -31,16 +31,16 @@ public class UserDaoImpl extends JdbcDaoSupport implements UserDao {
 
         List<User> users = new ArrayList<>();
         User user = null;
-        for ( Map<String, Object> row : rows ) {
+        for (Map<String, Object> row : rows) {
             user = new User();
-            user.setId_user( ((BigDecimal)row.get("ID_USER")).longValue() );
-            user.setLogin( (String)row.get("LOGIN") );
-            user.setEmail( (String)row.get("EMAIL") );
-            user.setName( (String)row.get("NAME") );
-            user.setType( (String)row.get("TYPE") );
-            user.setPasswd( (String)row.get("PASSWD") );
-            user.setPasswd_old( (String)row.get("PASSWD_OLD") );
-            user.setActive( (String)row.get("ACTIVE") );
+            user.setId_user(((BigDecimal) row.get("ID_USER")).longValue());
+            user.setLogin((String) row.get("LOGIN"));
+            user.setEmail((String) row.get("EMAIL"));
+            user.setName((String) row.get("NAME"));
+            user.setType((String) row.get("TYPE"));
+            user.setPasswd((String) row.get("PASSWD"));
+            user.setPasswd_old((String) row.get("PASSWD_OLD"));
+            user.setActive((String) row.get("ACTIVE"));
             users.add(user);
         }
 

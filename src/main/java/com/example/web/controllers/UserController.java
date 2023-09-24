@@ -19,6 +19,10 @@ public class UserController {
     @Autowired
     UserService userService;
 
+//TODO tambien se puede inyectar desde el controller
+//    @Autowired
+//    UserMapper userMapper;
+
     @RequestMapping("/users")
     public String users(Model model) {
         User user = new User();

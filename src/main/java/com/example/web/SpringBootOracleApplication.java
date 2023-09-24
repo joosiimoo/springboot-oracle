@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("com.example.web")
 public class SpringBootOracleApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBootOracleApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootOracleApplication.class, args);
+    }
 
 }
